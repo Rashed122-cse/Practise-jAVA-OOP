@@ -3,6 +3,8 @@ package Abstraction;
 public abstract class  vehicle {
     private int noOfTire ;
 
+    public abstract void makeStartSount();
+
     public vehicle(int noOfTire) {
         this.noOfTire = noOfTire;
     }

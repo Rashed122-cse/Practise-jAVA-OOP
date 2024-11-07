@@ -5,6 +5,7 @@ public class TestAbstraction {
        // vehicle vh = new vehicle(2);
         Car ca = new Car(4);
         ca.commuite();
+        ca.makeStartSount();
 
 
     }
