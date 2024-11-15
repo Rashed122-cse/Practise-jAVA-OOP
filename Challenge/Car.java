@@ -6,4 +6,5 @@ public class Car extends Vehicle{
         super.service();
         System.out.println("car is getting service....");
     }
+
 }

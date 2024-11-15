@@ -12,4 +12,9 @@ public class Car extends vehicle {
     public Car(int noOfTire) {
         super(noOfTire);
     }
+    @Override
+    public void getSetGo() {
+        System.out.println("going to place");
+    }
+
 }

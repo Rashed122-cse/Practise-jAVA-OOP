@@ -1,2 +1,5 @@
-package Polymorpism;public class Vehical {
+package Polymorpism;
+
+public interface Vehical {
+      void start();
 }

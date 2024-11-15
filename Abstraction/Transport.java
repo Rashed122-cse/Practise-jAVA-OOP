@@ -1,2 +1,6 @@
-package Abstraction;public interface Transport {
+package Abstraction;
+
+public interface Transport {
+     void getSetGo();
+
 }
