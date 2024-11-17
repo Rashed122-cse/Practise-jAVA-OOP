@@ -79,9 +79,8 @@ public class LogIn extends JFrame {
             }
         });
 
-        // Add an image label
-        JLabel imageLabel = new JLabel(new ImageIcon("ICE.png")); // Replace with your image path
-        imageLabel.setBounds(10, 10, 300, 300); // Adjust size and position as needed
+        JLabel imageLabel = new JLabel(new ImageIcon("ICE.png"));
+        imageLabel.setBounds(10, 10, 300, 300);
         contentPane.add(imageLabel);
 
 
