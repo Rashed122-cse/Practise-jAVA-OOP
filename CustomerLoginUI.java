@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CustomerLoginUI {
+public class customer {
     public static void main(String[] args) {
         // Create the main frame
         JFrame frame = new JFrame("Customer Login");
