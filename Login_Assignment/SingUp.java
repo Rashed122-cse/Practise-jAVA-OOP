@@ -1,4 +1,4 @@
-package Swing;
+package Login_Assignment;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -11,7 +11,7 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-import javax.swing.JPasswordField;  // Import JPasswordField for password input
+import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
@@ -22,7 +22,7 @@ public class SingUp extends JFrame {
     private JPanel contentPane;
     private JTextField textName;
     private JTextField textId;
-    private JPasswordField passwordField;  // Use JPasswordField for password input
+    private JPasswordField passwordField;
 
     private static ArrayList<User> users = new ArrayList<>();
 
@@ -86,7 +86,7 @@ public class SingUp extends JFrame {
         textId.setBounds(400, 118, 225, 38);
         contentPane.add(textId);
 
-        // Use JPasswordField for the password
+
         passwordField = new JPasswordField();
         passwordField.setFont(new Font("Tahoma", Font.BOLD, 17));
         passwordField.setBounds(400, 198, 225, 38);
@@ -95,22 +95,21 @@ public class SingUp extends JFrame {
         JButton btnNewButton = new JButton("Create Account ");
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // Store user input in the ArrayList
+
                 String name = textName.getText();
                 String id = textId.getText();
-                char[] passwordChars = passwordField.getPassword(); // Retrieve password
-                String password = new String(passwordChars); // Convert char[] to String
+                char[] passwordChars = passwordField.getPassword();
+                String password = new String(passwordChars);
 
-                // Create a new User object and add it to the list
+
                 User newUser = new User(name, id, password);
                 users.add(newUser);
 
-                JOptionPane.showMessageDialog(null, "Account Created! You can now log in.");
+                JOptionPane.showMessageDialog(null, "Account Created successfully.");
 
-                // Go back to the login page
                 login frame = new login();
                 frame.setVisible(true);
-                dispose();  // Close the sign-up frame
+                dispose();
             }
         });
         btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 20));

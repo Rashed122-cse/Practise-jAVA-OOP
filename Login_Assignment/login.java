@@ -1,4 +1,4 @@
-package Swing;
+package Login_Assignment;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -49,7 +49,6 @@ public class login extends JFrame {
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
         contentPane.setLayout(null);
-
         JLabel lblNewLabel = new JLabel("I'd number :");
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
         lblNewLabel.setBounds(213, 54, 127, 38);
@@ -78,7 +77,7 @@ public class login extends JFrame {
                 String username = textField.getText();
                 String password = textField_1.getText();
 
-                // Check the entered credentials against the list of users
+
                 boolean loginSuccess = false;
                 ArrayList<User> users = SingUp.getUsers();
                 for (User user : users) {
@@ -89,9 +88,9 @@ public class login extends JFrame {
                 }
 
                 if (loginSuccess) {
-                    JOptionPane.showMessageDialog(null, "Login Successful. Welcome!");
+                    JOptionPane.showMessageDialog(null, "Login successful");
                 } else {
-                    JOptionPane.showMessageDialog(null, "Invalid credentials. Please try again.");
+                    JOptionPane.showMessageDialog(null, "wrong input . Please try again.");
                 }
             }
         });
