@@ -43,13 +43,13 @@ public class LogIn extends JFrame {
         JLabel lblUsername = new JLabel("User Name:");
         lblUsername.setFont(new Font("Tahoma", Font.BOLD, 15));
         lblUsername.setBounds(336, 72, 99, 72);
-        lblUsername.setForeground(Color.BLUE); // Set text color to blue
+      //  lblUsername.setForeground(Color.BLUE);
         contentPane.add(lblUsername);
 
         JLabel lblPassword = new JLabel("Password:");
         lblPassword.setFont(new Font("Tahoma", Font.BOLD, 15));
         lblPassword.setBounds(336, 144, 89, 72);
-        lblPassword.setForeground(Color.RED); // Set text color to red
+      //  lblPassword.setForeground(Color.RED);
         contentPane.add(lblPassword);
 
         textFieldUsername = new JTextField();
@@ -61,20 +61,19 @@ public class LogIn extends JFrame {
         passwordField.setBounds(435, 159, 218, 46);
         contentPane.add(passwordField);
 
-        JButton btnLogin = new JButton("Login");
-        btnLogin.setFont(new Font("Tahoma", Font.BOLD, 18));
-        btnLogin.setBounds(435, 231, 127, 46);
-        contentPane.add(btnLogin);
+        JButton button = new JButton("Login");
+        button.setFont(new Font("Tahoma", Font.BOLD, 18));
+        button.setBounds(435, 231, 127, 46);
+        contentPane.add(button);
 
-        btnLogin.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+        button.addActionListener(new ActionListener() {
+            @Override public void actionPerformed(ActionEvent e) {
                 String username = textFieldUsername.getText();
                 String password = new String(passwordField.getPassword());
-
-                if (USERNAME.equals(username) && PASSWORD.equals(password)) {
-                    JOptionPane.showMessageDialog(null, "Thank you Sir for checking my program");
-                } else {
-                    JOptionPane.showMessageDialog(null, "Invalid username or password", "Login Error", JOptionPane.ERROR_MESSAGE);
+                if(USERNAME.equals(username)){
+                    JOptionPane.showMessageDialog(null,"thank you");
+                }else{
+                    JOptionPane.showMessageDialog(null, "error" );
                 }
             }
         });
@@ -86,3 +85,4 @@ public class LogIn extends JFrame {
 
     }
 }
+

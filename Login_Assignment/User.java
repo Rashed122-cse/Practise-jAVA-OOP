@@ -9,7 +9,7 @@ public class User {
     public User(String name, String id, String password) {
         this.name = name;
         this.id = id;
-        this.password = password;  // Initialize the password
+        this.password = password;
     }
 
 
